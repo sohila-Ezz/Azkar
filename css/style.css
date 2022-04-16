@@ -1,8 +1,12 @@
 *{
   font-family: 'Neo Sans Arabic', 'arial';
   direction: rtl;
+  box-sizing: border-box;
 }
-
+ul{
+  padding: 0;
+  margin: 0;
+}
 nav{
   background-color: white;
   font-size: 20px;
@@ -45,7 +49,9 @@ nav .nav-link a:hover{
   
    width: 100%;
    height: 100%;
-   padding: 20px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
    
  }
  .texDiv h1 {
@@ -87,12 +93,16 @@ nav .nav-link a:hover{
    height: 50px;
  }
 
-.services div{
+.services .arkan{
  border: 1px solid #ACACAC; 
  text-align: center;
 height: 200px;
-width: 180px;
 border-radius: 10px;
+}
+@media only screen and (max-width: 992px) {
+  .services div{
+    margin-bottom: 10px;
+  }
 }
 .services div:hover{
   background-image: linear-gradient(#20A26A, #42B056 );
@@ -116,7 +126,7 @@ border-radius: 10px;
 .services div:hover p{
   color: white;
 }
-.services div:hove img{
+.services div:hover img{
   background-color: white;
 }
 
@@ -186,22 +196,41 @@ padding-bottom: 30px;
   text-align: center;
 }
 .askar{
-  margin: auto;
-  padding: 30px;
+ margin-bottom: 30px;
 }
 
 .firstRow{
   border-radius: 10px;
   background-color: #23304b ;
+  display: flex;
 }
 .counter{
   background-image: linear-gradient(#20A26A,#42B056);
   color: white;
   text-align: center;
   border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
-.counter h1{
-  padding-top: 70px;
+@media only screen and (max-width: 992px) {
+  .zekrDiv{
+    order: -1;
+  }
+}
+.counter-num{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.counter .counter-input{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .ShareDiv{
@@ -209,7 +238,11 @@ padding-bottom: 30px;
  background-color: #2e3a54 ;
 border-top-left-radius: 10px;
 border-bottom-left-radius: 10px;
-padding-top: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+box-sizing: border-box;
 }
 .zekrDiv{
  padding: 50px;
@@ -228,9 +261,12 @@ font-family: 'PDMS_Saleem_QuranFont_shipped';
 }
 
 /* sohila */
+.duaa-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
 .prayerDiv{
-  height: 150px;
-  padding-top: 50px;
   
 
 }
@@ -241,7 +277,6 @@ font-family: 'PDMS_Saleem_QuranFont_shipped';
 
 }
 .prayerBtn{
-   padding-top: 50px;
    text-align: left;
   
 }
@@ -265,6 +300,13 @@ font-family: 'PDMS_Saleem_QuranFont_shipped';
   background-image: linear-gradient(#20A26A,#42B056);
   color: white;
   border: none;
+}
+.duaa{
+  padding: 50px 0px;
+}
+.card-style{
+  padding: 20px;
+  box-sizing: border-box;
 }
 /* footer */
 .footer{
